@@ -11,7 +11,8 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err,db)=>{
     'name':'Sagar'
    },
    {$set: {'age' : 20 }
-   }
+},
+ 
   ).then((result)=>{
       console.log(result);
   })
