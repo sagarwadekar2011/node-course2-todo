@@ -6,6 +6,9 @@ var {ObjectID} = require('mongodb');
 var {Todo} = require('./models/todo');
 var {User} = require('./models/user');
 
+const port = process.env.PORT || 3000 ;
+
+
 var app = express();
 app.use(bodyParser.json());
 
@@ -46,6 +49,6 @@ app.get('/todo/:id',(req,res)=>{
  });
 });
 
-app.listen(3000, ()=>{
-    console.log('Listening to the port 3000');
+app.listen(port, ()=>{
+    console.log(`Listening to the port ${port}`);
 });
